@@ -1,2 +1,2 @@
 # demo-repo
-Demo repository for class
+Demo repository for class!
