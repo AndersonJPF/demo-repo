@@ -7,8 +7,8 @@ Variables
 '''
 
 # put variables here
-worldx = 960
-worldy = 720
+worldx = 1024
+worldy = 1024
 fps   = 40  # frame rate
 ani   = 4   # animation cycles
 
@@ -34,7 +34,8 @@ Setup
 clock = pygame.time.Clock()
 pygame.init()
 world = pygame.display.set_mode([worldx, worldy])
-world.fill(BLUE)
+bg = pygame.image.load(os.path.join('images', 'stage.png'))
+bgbox = world.get_rect()
 
 '''
 Main Loop
@@ -57,5 +58,6 @@ while main:
                 sys.exit()
             finally:
                 main = False
+    world.blit(bg, bgbox)
     pygame.display.flip()
     clock.tick(fps)
